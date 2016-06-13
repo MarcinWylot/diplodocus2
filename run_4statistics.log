@@ -1,0 +1,67 @@
+first pass
+KM.Add
+TH.Add
+TH.AddRelation
+storing all triples
+P.PartitionMolecules
+all molecules on master: 58397302
+node: 0	 number of molecules: 58397302
+Loading Time: 3181.8
+Memory: VmSize:	15406664 kB
+Number of molecules for this node: 58397302
+M.CreateMolecule
+TM.CreateTemplates
+Memory TM.CreateTemplates before:  VmSize:	64732636 kB
+templates2merge
+TemplateManager::MergeTemplates
+TM.MoleculeTemplate
+TM.TemplatesGraph
+Loading Time: 5985.41
+Memory: VmSize:	71418208 kB
+====== pathQueryTemplates ======
+Tname: 21
+TsameAs: 21
+TwasDerivedFrom: 21
+TisPartOf: 12
+Tprovince: 13
+Tcountry: 15
+moleculesZ.size(): 8
+Tcomment: 20
+TbirthYear: 7
+TdeathDate: 7
+TwikiPageRevisionID: 21
+TwikiPageExternalLink: 20
+TisPrimaryTopicOf: 21
+Tplaceofdeath: 7
+TplaceOfBirth: 7
+# 4717440
+====== pathQuery2Templates ======
+moleculesZ.size(): 8
+Thomepage: 19
+TpopulationDensity: 12
+TpercentageOfAreaWater: 10
+TwikiPageOutDegree: 21
+TseeAlso: 12
+moleculesY.size(): 8
+# 150958080
+====== triangle2Templates ======
+TseeAlso: 12
+Tcomment: 20
+Tlabel: 21
+TareaTotal1: 16
+TareaCode: 16
+TareaTotal2: 16
+TleaderName: 12
+moleculesZ1.size(): 8
+Tcountry: 15
+TleaderTitle: 16
+TareaCode: 16
+Televation: 13
+TpostalCode: 14
+moleculesZ5.size(): 8
+Tlocation: 6
+Tcountry: 15
+Tabbreviation: 6
+Thomepage: 6
+Tstate: 15
+# 179529728

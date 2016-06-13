@@ -1,0 +1,7 @@
+/home/martin/Dropbox/projects.kdv4/diplodocus2/debug/CMakeFiles/install.dir
+/home/martin/Dropbox/projects.kdv4/diplodocus2/debug/CMakeFiles/list_install_components.dir
+/home/martin/Dropbox/projects.kdv4/diplodocus2/debug/CMakeFiles/rebuild_cache.dir
+/home/martin/Dropbox/projects.kdv4/diplodocus2/debug/CMakeFiles/diplodocus2.dir
+/home/martin/Dropbox/projects.kdv4/diplodocus2/debug/CMakeFiles/edit_cache.dir
+/home/martin/Dropbox/projects.kdv4/diplodocus2/debug/CMakeFiles/install/strip.dir
+/home/martin/Dropbox/projects.kdv4/diplodocus2/debug/CMakeFiles/install/local.dir

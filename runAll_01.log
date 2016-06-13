@@ -1,0 +1,137 @@
+first pass
+KM.Add
+TH.Add
+TH.AddRelation
+storing all triples
+P.PartitionMolecules
+all molecules on master: 58397302
+node: 0	 number of molecules: 58397302
+Loading Time: 973.405
+Memory: VmSize:	15406664 kB
+Number of molecules for this node: 58397302
+M.CreateMolecule
+TM.CreateTemplates
+Memory TM.CreateTemplates before:  VmSize:	64732636 kB
+templates2merge
+TemplateManager::MergeTemplates
+TM.MoleculeTemplate
+TM.TemplatesGraph
+Loading Time: 3802.3
+Memory: VmSize:	71418208 kB
+moleculesZ.size(): 1
+# 4717440
+
+pathQueryPredicates: 3.42837
+moleculesZ.size(): 1
+# 4717440
+
+pathQueryPredicates: 2.60731
+moleculesZ.size(): 1
+# 4717440
+
+pathQueryPredicates: 3.12465
+======
+moleculesZ.size(): 8
+# 4717440
+
+pathQueryTemplates: 2.70818
+======
+moleculesZ.size(): 8
+# 4717440
+
+pathQueryTemplates: 3.2453
+======
+moleculesZ.size(): 8
+# 4717440
+
+pathQueryTemplates: 3.32414
+# 4717440
+
+pathQueryTemplatesGraph: 3.2622
+# 4717440
+
+pathQueryTemplatesGraph: 3.24001
+# 4717440
+
+pathQueryTemplatesGraph: 3.20388
+# 150958080
+
+pathQuery2Predicates: 125.853
+# 150958080
+
+pathQuery2Predicates: 123.848
+# 150958080
+
+pathQuery2Predicates: 121.936
+# 150958080
+
+pathQuery2Templates: 119.631
+# 150958080
+
+pathQuery2Templates: 119.024
+# 150958080
+
+pathQuery2Templates: 120.249
+# 150958080
+
+pathQuery2TemplatesGraph: 120.083
+# 150958080
+
+pathQuery2TemplatesGraph: 119.406
+# 150958080
+
+pathQuery2TemplatesGraph: 120.133
+# 4603392
+
+trianglePredicates: 0.671048
+# 4603392
+
+trianglePredicates: 0.532037
+# 4603392
+
+trianglePredicates: 0.551891
+# 4603392
+
+triangleTemplates: 0.545671
+# 4603392
+
+triangleTemplates: 1.07075
+# 4603392
+
+triangleTemplates: 0.549742
+# 4603392
+
+triangleTemplatesGraph: 0.557437
+# 4603392
+
+triangleTemplatesGraph: 0.559383
+# 4603392
+
+triangleTemplatesGraph: 0.564649
+# 179529728
+
+triangle2Predicates: 641.217
+# 179529728
+
+triangle2Predicates: 615.514
+# 179529728
+
+triangle2Predicates: 629.839
+# 179529728
+
+triangle2Templates: 633.993
+# 179529728
+
+triangle2Templates: 621.416
+# 179529728
+
+triangle2Templates: 622.41
+# 179529728
+
+triangle2TemplatesGraph: 616.655
+# 179529728
+
+triangle2TemplatesGraph: 594.867
+# 179529728
+
+triangle2TemplatesGraph: 582.953

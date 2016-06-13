@@ -1,0 +1,59 @@
+first pass
+KM.Add
+TH.Add
+TH.AddRelation
+storing all triples
+P.PartitionMolecules
+all molecules on master: 58397302
+node: 0	 number of molecules: 58397302
+Loading Time: 935.544
+Memory: VmSize:	15406660 kB
+Number of molecules for this node: 58397302
+M.CreateMolecule
+TM.CreateTemplates
+Memory TM.CreateTemplates before:  VmSize:	64732632 kB
+templates2merge
+TemplateManager::MergeTemplates
+TM.MoleculeTemplate
+TM.TemplatesGraph
+Loading Time: 6984.51
+Memory: VmSize:	71418204 kB
+# 1
+
+pathQuery2Predicates: 0.906042
+# 1
+
+pathQuery2Predicates: 0.00483
+# 1
+
+pathQuery2Predicates: 0.004681
+moleculesZ.size(): 8
+# 1
+
+pathQuery2Templates: 0.045254
+moleculesZ.size(): 8
+# 1
+
+pathQuery2Templates: 0.005767
+moleculesZ.size(): 8
+# 1
+
+pathQuery2Templates: 0.005007
+# 1
+
+triangle2Predicates: 0.362676
+# 1
+
+triangle2Predicates: 0.003677
+# 1
+
+triangle2Predicates: 0.003601
+# 1
+
+triangle2Templates: 0.032275
+# 1
+
+triangle2Templates: 0.003792
+# 1
+
+triangle2Templates: 0.003761
