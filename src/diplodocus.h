@@ -26,112 +26,83 @@
 #include <unordered_map>
 #include <dirent.h>
 #include <algorithm>
-
+#include <typeinfo>
 
 
 using namespace std;
 
 //functions
-void *DiploMalloc(size_t size);
-void ExtractTripleFromLine(const string& str, vector<string>& tokens);
 void tokenize(const string& str,const string& delimiters, vector<string>& tokens);
 void tokenize2(const string& str,const string& delimiters, vector<string>& tokens);
 
-long double getDuble(const string& str);
-
-
-
 
 /// proper types definitions
-typedef unsigned long int TYPE_ID;
 typedef	unsigned long int KEY_ID;
-#define MASK 16
-#define BASE 64
 
-//typedef	unsigned int KEY_ID;
-//#define MASK 8
-//#define BASE 32
-
-#define PredMask 0x8000000000000000 //for inferted graphs we set MSB to 1
-
-
-//#define IFEXITERROR                                                     if(Constante::ExitIfError){exit(0);};
 //#define PRINT_ERROR                                                     false
-#define ERROR_OUT {cerr << endl << "ERROR in " << __FILE__ << " at line " << __LINE__ << endl;}
+#define ERROR_OUT {cerr << "ERROR in " << __FILE__ << " at line " << __LINE__ << endl;}
+#define PERF_PROF {cerr << "TIME: " << diplo::stopwatch_get() << "--" << diplo::memory_usage() << " " << "FILE: " << __FILE__ << " LINE: " << __LINE__ << endl;}
+//#define PERF_PROF {}
 
-//#define PRINT_NO_RESULTS {cout << endl << "results.size(): " << results.size() << endl;}
-#define PRINT_NO_RESULTS {}
+namespace diplo {
+extern void dictionatyTest ( const char * file );
+extern void stopwatch_start();
+extern double stopwatch_get();
+extern string memory_usage();
+extern timeval stopwatch;
+extern string dbDir;
+extern string srcDir;
 
-//#define PRINT_CLIENT_TIME {data[3] = '\0'; cout << data << "\t" << diplo::stopwatch_get() << endl;}
-#define PRINT_CLIENT_TIME {}
-
-
-typedef unordered_set<KEY_ID> O_l; // list of objects
-typedef unordered_map< KEY_ID, O_l > P_l; //list of predicates and co-located objects
-typedef unordered_map<KEY_ID, P_l > S_l; //list of subjects and co-located p_l
-typedef unordered_map< KEY_ID, unordered_set<KEY_ID> > OM_l; //list of objects and their molecules
-
-namespace queries {
-
-class val4 {
-public:
-    KEY_ID v1;
-    KEY_ID v2;
-    KEY_ID v3;
-    KEY_ID v4;
-};
-
-class val5 {
-public:
-    KEY_ID v1;
-    KEY_ID v2;
-    KEY_ID v3;
-    KEY_ID v4;
-    KEY_ID v5;
-};
+extern KEY_ID type;
 
 }
 
-class QueryGraph {
+
+
+#define QO_UNION 1
+#define QO_NOP 2
+#define QO_OO_Join 3
+
+#define QF_PROJECTION 1
+#define QF_INDEX 2
+class QueryBGP {
 public:
-    short int operation;
+    //short int operation;
     pair <short int, KEY_ID> subject;
     pair <short int, KEY_ID> predicate;
     pair <short int, KEY_ID> object;
-    vector<QueryGraph> next;
-    QueryGraph() {
+    QueryBGP() {
         subject.first = 0;
         predicate.first=0;
         object.first=0;
         subject.second = 0;
         predicate.second=0;
         object.second=0;
-        operation=0;
     }
-//	TripleIDs(KEY_ID s,KEY_ID p,KEY_ID o,KEY_ID pr) {subject = s;predicate=p; object=o;}
 };
 
+template <typename Iterator>
+class iterator_pair
+{
+public:
+    iterator_pair ( Iterator first, Iterator last ) : f_ ( first ), l_ ( last ) {}
+    Iterator begin () const { return f_; }
+    Iterator end   () const { return l_; }
 
-namespace diplo {
-extern string server_adr;
-extern string server_port;
-extern unsigned myID;
-extern unsigned nbOfClients;
-extern void usage(const char * msg);
-extern bool onlyPartition;
-extern int maxScope;
-extern int minScope;
-extern void stopwatch_start();
-extern double stopwatch_get();
-extern string memory_usage();
-extern void dictionatyTest(const char * file);
-extern timeval stopwatch;
-extern string moleculeconffile;
-extern string dbDir;
-extern string srcDir;
-extern int pause_int;
-extern size_t network_buf_size;
-extern int PartitionerRange;
+private:
+    Iterator f_;
+    Iterator l_;
+};
 
+template <typename Iterator>
+iterator_pair<Iterator> make_iterator_pair ( Iterator f, Iterator l )
+{
+    return iterator_pair<Iterator> ( f, l );
 }
+
+#include "KeyManager.h"
+#include	"Conductor.h"
+#include	"LUBM.h"
+#include	"DBP.h"
+
 #endif /* DIPLODOCUS_H_ */

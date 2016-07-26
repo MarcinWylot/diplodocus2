@@ -6,66 +6,6 @@
  */
 
 #include	"diplodocus.h"
-
-void *DiploMalloc(size_t size) {
-    void *t;
-    t = malloc(size);
-    bzero(t,size);
-    return t;
-}
-
-void ExtractTripleFromLine(const string& str, vector<string>& tokens)
-{
-
-    string::size_type lastPos = str.find_first_of('<', 0);
-    // find first "non-delimiter".
-    string::size_type pos = str.find_first_of('>', lastPos);
-    cerr << str.substr(lastPos, pos - lastPos + 1) << "---";
-
-    lastPos = str.find_first_of('<', lastPos);
-    pos = str.find_first_of('>', lastPos);
-    cerr << str.substr(lastPos, pos - lastPos + 1) << endl;
-
-
-//	while (string::npos != pos || string::npos != lastPos)
-//	{
-//    	// found a token, add it to the vector.
-//    	tokens.push_back(str.substr(lastPos, pos - lastPos));
-//
-//    	// skip delimiters.  Note the "not_of"
-//    	lastPos = str.find_first_not_of(delimiters, pos);
-//
-//    	// find next "non-delimiter"
-//    	pos = str.find_first_of(delimiters, lastPos);
-//	}
-//
-//	char *c, *c1 ;
-//	static char cstr[2048];
-//	cstr[2047] = '\0';
-//	strncpy (cstr, line->c_str(), 2047);
-//	c=cstr;
-//
-//	if ((c=strchr (c,'<'))) { c++; if((c1=strchr (c,'>'))) {*c1=0; *s=c; c = c1+1;}}
-//	if ((c=strchr (c,'<'))) { c++; if((c1=strchr (c,'>'))) {*c1=0; *p=c; c = c1+1;}}
-//
-//
-//	if ((c=strchr (c1+1,'<'))) { c++; c1=strchr (c,'>');}
-//	else if ((c=strchr (c1+1,'"'))) { c++; c1=strchr (c,'"');}
-//	if(c && c1) {*c1=0;*o=c;}
-//
-//
-//	if ( s->empty() or p->empty() or o->empty()) cerr << "fuck" << endl;
-
-}
-
-
-long double getDuble(const string& str)
-{
-    string::size_type lastPos = str.find_first_not_of('"', 0);
-    string::size_type pos = str.find_first_of('"', lastPos);
-    return stold(str.substr(lastPos, pos - lastPos));
-}
-
 void tokenize(const string& str,const string& delimiters, vector<string>& tokens)
 {
     //SUBJECT
@@ -126,3 +66,4 @@ void tokenize2(const string& str, const string& delimiters, vector<string>& toke
         pos = str.find_first_of(delimiters, lastPos);
     }
 }
+

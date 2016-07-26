@@ -5,47 +5,31 @@
  *      Author: marcin
  */
 
-#ifndef KEYMANAGER2_H_
-#define KEYMANAGER2_H_
-
 #include	"diplodocus.h"
 
-typedef pair<string, KEY_ID > TdicEl;
-typedef unordered_map<string, KEY_ID > Tdic;
+#ifndef KEYMANAGER_H_
+#define KEYMANAGER_H_
 
-typedef unordered_map<KEY_ID, const void* > Tinvdic;
-typedef pair< KEY_ID, const void* > TinvdicEl;
-
-class KeyManager2 {
-    Tdic dictionary;
-    Tinvdic invdictionary;
+class KeyManager {
+    
+   
 public:
-    KEY_ID Add(const char * _uri, KEY_ID oid = 0);
-    void Display();
-    void DisplayInv();
-    string Get(KEY_ID id);
-    KEY_ID Get(const char* _uri);
-    void Store();
-    void Restore();
+  unordered_map<string, KEY_ID> dictionary;
+  unordered_map<KEY_ID, const string * > inv_dictionary;
+     KEY_ID Add(const char * _uri, KEY_ID oid = 0);
+     void Display();
+     void DisplayInv();
+     const char * Get(KEY_ID id);
+     KEY_ID Get(const char* _uri);
+//     void Store();
+//     void Restore();
 
-    //to be removed
-    void MakeInverseIndexTypes();
-    void MakeInverseIndex(multimap<KEY_ID, TYPE_ID>* data);
-    static TYPE_ID GetType(KEY_ID id);
-    TYPE_ID GetType(const char* _uri);
-    size_t GetNbOfTypes();
-    KEY_ID GetSeq(KEY_ID id);
-    static KEY_ID GetId(KEY_ID seq, TYPE_ID tid);
-    KEY_ID GetSeq(const char* _uri);
-    map<KEY_ID, KEY_ID> * GetElementsOfType(TYPE_ID _type);
-
-
-    KeyManager2();
-    virtual ~KeyManager2();
+    KeyManager();
+    virtual ~KeyManager();
 };
 
 namespace diplo {
-extern KeyManager2 KM;
+extern KeyManager KM;
 }
 
 class TripleIDs {
@@ -66,4 +50,8 @@ public:
 };
 std::ostream& operator<<(std::ostream& os, const TripleIDs& obj);
 
-#endif /* KEYMANAGER2_H_ */
+namespace diplo {
+extern KeyManager KM;
+}
+
+#endif /* KEYMANAGER_H_ */

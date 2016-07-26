@@ -7,27 +7,15 @@
 
 #ifndef CONDUCTOR_H_
 #define CONDUCTOR_H_
-
 #include	"diplodocus.h"
-#include	"KeyManager.h"
-#include 	"TypesHierarchy.h"
-#include	"TemplateManager.h"
 #include	"Molecules.h"
-#include	"Partitioner.h"
-#include	"TypesManager.h"
-#include	"Server.h"
-#include	"Client.h"
-//#include	"LUBMnetwork.h"
-//#include	"DBPnetwork.h"
+#include	"KeyManager.h"
+
 
 
 class Conductor {
 public:
     void LoadData();
-    void StoreDataForGraphPartitioning();
-    void RestoreDataForGraphPartitioning();
-    void HandleQueriesLUBMnetwork();
-    void HandleQueriesDBPnetwork();
     Conductor();
     ~Conductor();
 };
